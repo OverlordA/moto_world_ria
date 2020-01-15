@@ -17,13 +17,17 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import { CarList } from "./view";
+
+import('./config/reactotronConfig');
+
 
 const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Text>Work ts app </Text>
+        <CarList />
       </SafeAreaView>
     </>
   );
