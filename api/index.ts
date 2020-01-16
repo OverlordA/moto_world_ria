@@ -20,9 +20,9 @@ const findMotoWorldAdverbs = async () => {
     return result.data;
 };
 
-const infoById = async () => {
+const infoById = async ({ id }: { id: string }) => {
   const result = await axiosInstance.get(
-      `${baseUrl}auto/info?api_key=${RIA_API_KEY}&auto_id=26089295`
+      `${baseUrl}auto/info?api_key=${RIA_API_KEY}&auto_id=${id}`
   );
     return result.data;
 };
