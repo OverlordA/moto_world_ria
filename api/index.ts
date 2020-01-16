@@ -12,6 +12,14 @@ const testLogngRiaRequest = async () => {
     );
     return result.data;
 };
+
+const findMotoWorldAdverbs = async () => {
+    const result = await axiosInstance.get(
+        `${baseUrl}auto/search?api_key=${RIA_API_KEY}&category_id=2&state=4&city=4&sellerType=2`
+    );
+    return result.data;
+};
+
 const infoById = async () => {
   const result = await axiosInstance.get(
       `${baseUrl}auto/info?api_key=${RIA_API_KEY}&auto_id=26089295`
@@ -19,4 +27,4 @@ const infoById = async () => {
     return result.data;
 };
 
-export { testRiaRequest, testLogngRiaRequest, infoById };
+export { testRiaRequest, testLogngRiaRequest, infoById, findMotoWorldAdverbs };
