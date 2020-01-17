@@ -18,6 +18,8 @@
     "axios": "^0.19.1",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-image-progress": "^1.1.1",
+    "react-native-progress": "^4.0.3",
     "reactotron-react-native": "^4.0.2",
     "reactotron-redux": "^3.1.2",
     "typescript": "^3.7.4"

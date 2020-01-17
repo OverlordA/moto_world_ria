@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import {View, Text, TouchableOpacity, FlatList, ScrollView} from "react-native";
 import {findMotoWorldAdverbs, infoById} from "../../api";
 import {AdverbItem} from "../../components";
 const CarList: React.FC = () => {
@@ -16,11 +16,13 @@ const CarList: React.FC = () => {
       <TouchableOpacity onPress={getAdverbs}>
         <Text> make ria request </Text>
       </TouchableOpacity>
-        { adverbs.length > 0 ?
-            adverbs.map((item) => {
-                return <AdverbItem adverb={item}/>
-            }): <Text/>
-        }
+        <ScrollView>
+            { adverbs.length > 0 ?
+                adverbs.map((item) => {
+                    return <AdverbItem adverb={item}/>
+                }): <Text/>
+            }
+        </ScrollView>
     </View>
   );
 };
