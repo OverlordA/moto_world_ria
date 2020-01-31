@@ -4,7 +4,24 @@
             "outputFile": "/Users/antonkotik/Documents/workplace/moto_world_ria/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2076a77bd3547ddc88f81b5d53960fc1/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/3c3b8704b57e5d271a26436bbcc7fe1c/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "11,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "752,874",
+                        "endColumns": "121,133",
+                        "endOffsets": "869,1003"
+                    }
+                },
+                {
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2ae769cc637512c0669154b8ac822f3f/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

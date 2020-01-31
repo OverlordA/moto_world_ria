@@ -4,13 +4,32 @@
             "outputFile": "/Users/antonkotik/Documents/workplace/moto_world_ria/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2076a77bd3547ddc88f81b5d53960fc1/res/values-land/values-land.xml",
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2ae769cc637512c0669154b8ac822f3f/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
                         "startOffsets": "55,125,196",
                         "endColumns": "69,70,67",
                         "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/3c3b8704b57e5d271a26436bbcc7fe1c/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "431"
                     }
                 }
             ]

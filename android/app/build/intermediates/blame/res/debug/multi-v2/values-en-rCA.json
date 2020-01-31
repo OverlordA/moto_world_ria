@@ -4,7 +4,7 @@
             "outputFile": "/Users/antonkotik/Documents/workplace/moto_world_ria/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2076a77bd3547ddc88f81b5d53960fc1/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/2ae769cc637512c0669154b8ac822f3f/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/a2570cd8e3da09ad39ac20818d4d79ec/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/Users/antonkotik/.gradle/caches/transforms-2/files-2.1/c53bde9e0fc212cf6ad9c0acc4a3161e/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

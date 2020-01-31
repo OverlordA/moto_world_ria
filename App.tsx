@@ -17,20 +17,31 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import { CarList } from "./view";
-import Scanner from "./view/Scaner/Scanner";
+import {Adverb, CarList} from "./view";
 
 import('./config/reactotronConfig');
+import { createStackNavigator } from '@react-navigation/stack';
+type RootStackParamList = {
+  AdverbsList: undefined;
+  Adverb: undefined;
+};
 
+const RootStack = createStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <CarList />
-        {/*<Text> Test qr scaner </Text>*/}
-        {/*<Scanner />*/}
+        {/*<CarList />*/}
+        <RootStack.Navigator initialRouteName="AdverbList">
+          <RootStack.Screen name="AdverbsList" component={CarList} />
+          <RootStack.Screen
+              name="Adverb"
+              component={Adverb}
+          />
+        </RootStack.Navigator>
       </SafeAreaView>
     </>
   );

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {View, Text, Dimensions, StyleSheet, TouchableOpacity} from 'react-native';
 import { infoById } from "../../api";
-import Image from 'react-native-image-progress';
-import ProgressBar from 'react-native-progress';
 import FastImage from "react-native-fast-image";
 
 interface AdverbProps {
@@ -45,7 +43,6 @@ const AdverbItem: React.FC<AdverbProps> = ({ adverb }) => {
                         <Text>Year: {adverbCurrent.autoData.year}</Text>
                         <Text> Race: {adverbCurrent.autoData.race} </Text>
                     </Text>
-                {/*<Text>{adverbCurrent.autoData.description}</Text>*/}
                 <View style={styles.priceContainer}>
                     <Text style={styles.priceLabel}>Price:</Text><Text style={styles.price}> ${adverbCurrent.USD} / {adverbCurrent.UAH} грн / EUR {adverbCurrent.EUR}</Text>
                 </View>

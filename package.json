@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
+    "@react-native-community/masked-view": "^0.1.6",
+    "@react-navigation/stack": "^5.0.0-alpha.63",
     "@types/jest": "^24.0.25",
     "@types/react": "^16.9.17",
     "@types/react-native": "^0.60.30",
@@ -20,8 +22,13 @@
     "react-native": "0.61.5",
     "react-native-camera": "^3.16.0",
     "react-native-fast-image": "^7.0.2",
+    "react-native-gesture-handler": "^1.5.3",
     "react-native-image-progress": "^1.1.1",
     "react-native-progress": "^4.0.3",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-safe-area-context": "^0.6.4",
+    "react-native-screens": "^2.0.0-alpha.32",
+    "react-navigation": "^4.1.0",
     "reactotron-react-native": "^4.0.2",
     "reactotron-redux": "^3.1.2",
     "typescript": "^3.7.4"

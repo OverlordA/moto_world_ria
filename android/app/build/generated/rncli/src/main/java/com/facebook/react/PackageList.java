@@ -16,10 +16,20 @@ import com.moto_world_ria.R;
 
 // @react-native-community/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+// @react-native-community/masked-view
+import org.reactnative.maskedview.RNCMaskedViewPackage;
 // react-native-camera
 import org.reactnative.camera.RNCameraPackage;
 // react-native-fast-image
 import com.dylanvann.fastimage.FastImageViewPackage;
+// react-native-gesture-handler
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-reanimated
+import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-safe-area-context
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
 
 public class PackageList {
   private Application application;
@@ -66,8 +76,13 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
+      new RNCMaskedViewPackage(),
       new RNCameraPackage(),
-      new FastImageViewPackage()
+      new FastImageViewPackage(),
+      new RNGestureHandlerPackage(),
+      new ReanimatedPackage(),
+      new SafeAreaContextPackage(),
+      new RNScreensPackage()
     ));
   }
 }
