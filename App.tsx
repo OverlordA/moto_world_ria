@@ -18,6 +18,7 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import { CarList } from "./view";
+import Scanner from "./view/Scaner/Scanner";
 
 import('./config/reactotronConfig');
 
@@ -27,7 +28,9 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <CarList />
+        {/*<CarList />*/}
+        <Text> Test qr scaner </Text>
+        <Scanner />
       </SafeAreaView>
     </>
   );
