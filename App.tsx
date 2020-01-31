@@ -28,9 +28,9 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/*<CarList />*/}
-        <Text> Test qr scaner </Text>
-        <Scanner />
+        <CarList />
+        {/*<Text> Test qr scaner </Text>*/}
+        {/*<Scanner />*/}
       </SafeAreaView>
     </>
   );
