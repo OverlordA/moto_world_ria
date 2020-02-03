@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {View, Text, TouchableOpacity, FlatList, ScrollView} from "react-native";
 import {findMotoWorldAdverbs, infoById} from "../../api";
 import {AdverbItem} from "../../components";
-const CarList: React.FC = () => {
+const CarList: React.FC<{navigation: any}> = ({ navigation }) => {
   const [adverbs, setAdverbs] = useState([]);
 
   const getAdverbs = async () => {
@@ -19,7 +19,7 @@ const CarList: React.FC = () => {
         <ScrollView>
             { adverbs.length > 0 ?
                 adverbs.map((item) => {
-                    return <AdverbItem adverb={item}/>
+                    return <AdverbItem adverb={item} navigation={navigation}/>
                 }): <Text/>
             }
         </ScrollView>

@@ -5,9 +5,10 @@ import FastImage from "react-native-fast-image";
 
 interface AdverbProps {
     adverb: string;
+    navigation: any;
 }
 
-const AdverbItem: React.FC<AdverbProps> = ({ adverb }) => {
+const AdverbItem: React.FC<AdverbProps> = ({ adverb, navigation }) => {
 
     const [adverbCurrent, setAdverb ] = useState();
 
@@ -18,11 +19,13 @@ const AdverbItem: React.FC<AdverbProps> = ({ adverb }) => {
         const adverbById = await infoById({id});
         console.log('adver', adverbById);
         setAdverb(adverbById)
+
     };
     const { width, height } = Dimensions.get('window');
 
     const selectAdverb = () => {
         console.log('adverb selected ', adverb);
+        navigation.navigate('Adverb', { id: adverb });
     };
 
     return <TouchableOpacity onPress={selectAdverb}>

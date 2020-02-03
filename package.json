@@ -16,6 +16,7 @@
     "@types/jest": "^24.0.25",
     "@types/react": "^16.9.17",
     "@types/react-native": "^0.60.30",
+    "@types/react-navigation": "^3.4.0",
     "@types/react-test-renderer": "^16.9.1",
     "axios": "^0.19.1",
     "react": "16.9.0",
@@ -29,6 +30,7 @@
     "react-native-safe-area-context": "^0.6.4",
     "react-native-screens": "^2.0.0-alpha.32",
     "react-navigation": "^4.1.0",
+    "react-navigation-stack": "^2.1.0",
     "reactotron-react-native": "^4.0.2",
     "reactotron-redux": "^3.1.2",
     "typescript": "^3.7.4"
