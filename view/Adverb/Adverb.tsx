@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {View, Text } from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 import {infoById} from "../../api";
 import FastImage from "react-native-fast-image";
 
@@ -15,14 +15,11 @@ const Adverb: React.FC<{navigation: any}> = ({ navigation }) => {
        const adverbId =  navigation.getParam('id');
        if(adverbId)
             setCurrentAdverb(await infoById({id: adverbId }));
-
-
+       console.log(" current adverb ", currentAdverb);
     };
 
-    return <View>
-        <Text> Selected adverb: </Text>
-        {/*<Text> {JSON.stringify(currentAdverb)}</Text>*/}
-        {!!currentAdverb ? (<View>
+    return <SafeAreaView>
+        {!!currentAdverb ? (<View style={styles.adverb}>
             <FastImage
                 source={{
                     uri: currentAdverb.photoData.seoLinkF,
@@ -32,9 +29,57 @@ const Adverb: React.FC<{navigation: any}> = ({ navigation }) => {
                     height: 414,
                     width: '100%',
                 }}
-            /></View>)
+            />
+                <View style={styles.dealerContainer}>
+                    <View style={styles.dealerContent}>
+                        <FastImage
+                            source={{
+                                uri: currentAdverb.dealer.logo,
+                                priority: FastImage.priority.normal,
+                            }}
+                            style={{
+                                height: 50,
+                                width: 50,
+                            }}
+                        />
+                        <Text>{currentAdverb.dealer.name}</Text>
+                    </View>
+                </View>
+            <View style={styles.paramsContainer}>
+                <Text style={styles.title}>{currentAdverb.title}</Text>
+                <Text> Year: {currentAdverb.autoData.year}</Text>
+                <Text> Race: {currentAdverb.autoData.race}</Text>
+                <Text> Fuel Name: {currentAdverb.autoData.fuelName}</Text>
+                <Text> Location city: {currentAdverb.locationCityName}</Text>
+                <Text>{currentAdverb.autoData.description}</Text>
+            </View>
+        </View>)
             : <Text> dd</Text>
             }
-    </View>
+    </SafeAreaView>
 };
+
+const styles = StyleSheet.create({
+   adverb:{
+       display: 'flex',
+       flexDirection: 'column',
+   },
+    title: {
+       fontSize: 22,
+        fontWeight: 'bold',
+    },
+    paramsContainer: {
+       padding: 5,
+    },
+    dealerContainer: {
+       display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        margin: 3,
+    },
+    dealerContent: {
+        alignItems: 'center'
+    }
+});
 export default Adverb;

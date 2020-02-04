@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {View, Text, TouchableOpacity, FlatList, ScrollView} from "react-native";
 import {findMotoWorldAdverbs, infoById} from "../../api";
 import {AdverbItem} from "../../components";
 const CarList: React.FC<{navigation: any}> = ({ navigation }) => {
   const [adverbs, setAdverbs] = useState([]);
+
+  useEffect( () => {
+      getAdverbs()
+  }, []);
 
   const getAdverbs = async () => {
     const response = await findMotoWorldAdverbs();
@@ -12,14 +16,10 @@ const CarList: React.FC<{navigation: any}> = ({ navigation }) => {
   };
   return (
     <View>
-      <Text>Cars list </Text>
-      <TouchableOpacity onPress={getAdverbs}>
-        <Text> make ria request </Text>
-      </TouchableOpacity>
         <ScrollView>
             { adverbs.length > 0 ?
                 adverbs.map((item) => {
-                    return <AdverbItem adverb={item} navigation={navigation}/>
+                    return <AdverbItem adverb={item} navigation={navigation} key={item}/>
                 }): <Text/>
             }
         </ScrollView>
