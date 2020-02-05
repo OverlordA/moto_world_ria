@@ -8,46 +8,18 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  Text,
-  StatusBar, TouchableOpacity,
+  StatusBar,
 } from 'react-native';
 import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import {Adverb, CarList} from "./view";
-// ... screen imports
+import RootStack from "./navigator";
 
 import('./config/reactotronConfig');
-// import { createStackNavigator } from '@react-navigation/stack';
-// type RootStackParamList = {
-//   AdverbsList: undefined;
-//   Adverb: undefined;
-const RootStack = createStackNavigator({
-  CarList: {
-    screen: CarList,
-  }, Adverb: {
-    screen: Adverb,
-  }
-}, {
-  initialRouteName: 'CarList'
-});
 
 const AppContainer = createAppContainer(RootStack);
-// };
-
-// const RootStack = createStackNavigator<RootStackParamList>();
-// const HomeStack = createSwitchNavigator({
-//   CarList: {
-//       screen: CarList,
-//       path: '/'
-//   }, Adverb: {
-//     screen: Adverb,
-//     path: '/adverb'
-//   }});
 
 const App: React.FC = () => {
 
@@ -60,17 +32,6 @@ const App: React.FC = () => {
             borderColor: '#ff0008'
           }}
       />
-      {/*<SafeAreaView >*/}
-
-      {/*  /!*<CarList />*!/*/}
-      {/*  /!*<RootStack.Navigator initialRouteName="AdverbList">*!/*/}
-      {/*  /!*  <RootStack.Screen name="AdverbsList" component={CarList} />*!/*/}
-      {/*  /!*  <RootStack.Screen*!/*/}
-      {/*  /!*      name="Adverb"*!/*/}
-      {/*  /!*      component={Adverb}*!/*/}
-      {/*  /!*  />*!/*/}
-      {/*  /!*</RootStack.Navigator>*!/*/}
-      {/*</SafeAreaView>*/}
     </>
   );
 };
