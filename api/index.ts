@@ -1,5 +1,7 @@
 import axiosInstance from './axiosInstance';
 import {baseUrl, RIA_API_KEY} from './config';
+import RegistationFormValues from "../interfaces/forms/RegistationFormValues";
+import LoginFormValues from "../interfaces/forms/LoginFormValues";
 
 const testRiaRequest = async () => {
     const result = await axiosInstance.get(`${baseUrl}auto/used/autos?api_key=${RIA_API_KEY}`);
@@ -27,4 +29,11 @@ const infoById = async ({ id }: { id: string }) => {
     return result.data;
 };
 
-export { testRiaRequest, testLogngRiaRequest, infoById, findMotoWorldAdverbs };
+const registrationUser = async (registrationForm: RegistationFormValues) => {
+    console.log('registration form ', registrationForm);
+};
+const loginUser = async (loginForm: LoginFormValues) => {
+    console.log('login form ', loginForm);
+};
+
+export { testRiaRequest, testLogngRiaRequest, infoById, findMotoWorldAdverbs, registrationUser, loginUser };

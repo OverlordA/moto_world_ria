@@ -2,18 +2,15 @@ import React from 'react';
 import {View, Text, TextInput, Button, StyleSheet} from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-
-interface FormValues {
-    email: string;
-    password: string;
-}
+import LoginFormValues from "../../interfaces/forms/LoginFormValues";
+import {loginUser} from "../../api";
 
 const Login: React.FC =() => {
 
-    const submitLogin = (form: FormValues) => {
-        console.log('form w ', form);
+    const submitLogin = async (form: LoginFormValues) => {
+       await loginUser(form);
     };
-    const initialValues: FormValues = {
+    const initialValues: LoginFormValues = {
         email: '',
         password: '',
     };

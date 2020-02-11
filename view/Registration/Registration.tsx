@@ -1,12 +1,9 @@
 import React from 'react';
 import {View, Text, TextInput, Button, StyleSheet} from "react-native";
 import {Formik} from "formik";
-
-interface RegistrationFormValues {
-    email: string;
-    password: string;
-    confirmPassword: string;
-}
+import * as Yup from 'yup';
+import RegistrationFormValues from '../../interfaces/forms/RegistationFormValues'
+import {registrationUser} from "../../api";
 
 const Registration: React.FC = () => {
     const initialValues: RegistrationFormValues = {
@@ -14,9 +11,19 @@ const Registration: React.FC = () => {
         password: '',
         confirmPassword: ''
     };
+    const validationSchema = Yup.object({
+       email:  Yup
+           .string()
+           .nullable()
+           .required("This field is required !")
+           .email(),
+       password: Yup.string().nullable().required(),
+       confirmPassword: Yup.string().nullable().required(),
+    });
 
-    const submitRegForm = (form: RegistrationFormValues) => {
 
+    const submitRegForm = async (form: RegistrationFormValues) => {
+        await registrationUser(form);
     };
 
 
@@ -25,6 +32,7 @@ const Registration: React.FC = () => {
         <Formik
             initialValues={initialValues}
             onSubmit={submitRegForm}
+            validationSchema={validationSchema}
         >
             {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
                 <View>
