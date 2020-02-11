@@ -5,10 +5,17 @@ import * as Yup from 'yup';
 import LoginFormValues from "../../interfaces/forms/LoginFormValues";
 import {loginUser} from "../../api";
 
-const Login: React.FC =() => {
+interface LoginProps {
+    navigation: any,
+}
+
+const Login: React.FC<LoginProps> = ({navigation}) => {
 
     const submitLogin = async (form: LoginFormValues) => {
        await loginUser(form);
+    };
+    const toRegistration = async () => {
+      navigation.navigate('Registration')
     };
     const initialValues: LoginFormValues = {
         email: '',
@@ -47,6 +54,7 @@ const Login: React.FC =() => {
                 </View>
             )}
         </Formik>
+        <Text onPress={toRegistration}>To Registration </Text>
     </View>
 };
 
