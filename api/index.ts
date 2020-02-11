@@ -31,9 +31,11 @@ const infoById = async ({ id }: { id: string }) => {
 
 const registrationUser = async (registrationForm: RegistationFormValues) => {
     console.log('registration form ', registrationForm);
+    // todo Axios call
 };
 const loginUser = async (loginForm: LoginFormValues) => {
     console.log('login form ', loginForm);
+    // todo Axios call
 };
 
 export { testRiaRequest, testLogngRiaRequest, infoById, findMotoWorldAdverbs, registrationUser, loginUser };
