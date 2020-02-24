@@ -2,6 +2,10 @@ package com.moto_world_ria;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
+
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import org.reactnative.camera.RNCameraPackage;
@@ -12,6 +16,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
+
 
   private final ReactNativeHost mReactNativeHost =
       new ReactNativeHost(this) {
@@ -45,7 +50,17 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+      FacebookSdk.setAutoInitEnabled(true);
+      FacebookSdk.fullyInitialize();
+        logTest_eventEvent("test parameter for facebook analytics");
   }
+
+    public void logTest_eventEvent (String parametr_first) {
+        AppEventsLogger logger = AppEventsLogger.newLogger(this);
+        Bundle params = new Bundle();
+        params.putString("parametr_first", parametr_first);
+        logger.logEvent("test_event", params);
+    }
 
   /**
    * Loads Flipper in React Native templates.
